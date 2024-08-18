@@ -1,0 +1,593 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="../../../../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+
+  <body>
+    <!-- MAIN sTART -->
+    <main class="animate position-relative">
+      <!-- Header Section -->
+      <header class="mb-md-5">
+        <!-- Logo and Phone Info -->
+        <div class="logo">
+          <!-- Logo Image -->
+          <img src="assets/images/icon.png" style="width: 120px" alt="Icon" />
+        </div>
+        <!-- Phone Information -->
+        <a href="#" class="phoneInfo">
+          <img src="assets/images/phone.png" alt="Phone" />
+          <!-- Phone Details -->
+          <article>
+            <h4>(234) 91 333 03018</h4>
+            <p>Have Any Question?</p>
+          </article>
+        </a>
+      </header>
+
+      <!-- Main Content Container -->
+      <div class="container mt-5">
+        <div class="row">
+          <!-- Left Column -->
+          <div class="col-md-4 order_c">
+            <!-- Hotel Information -->
+            <aside>
+              <!-- Heading -->
+              <h2 class="asideHeading">
+                Let's Build Your Perfect Restaurant Website!
+              </h2>
+              <!-- Hotel Image -->
+              <div class="asideR">
+                <img
+                  src="assets/images/Brandmeal survey.png"
+                  alt="aside"
+                  class="sideImg"
+                />
+                <!-- Hotel Details -->
+                <div class="aside-content">
+                  <p>
+                    Answer a few quick questions to help us build the perfect
+                    site for you.
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
+
+          <!-- Right Column -->
+          <div class="col-md-8">
+            <!-- Review Form -->
+            <form
+              id="clientInfo"
+              class="ratingMain"
+              onsubmit="handleSubmit(event)"
+            >
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="inputField">
+                    <label class="labelHeading"> Restaurant name </label>
+                    <input
+                      type="text"
+                      id="review"
+                      name="review"
+                      placeholder="Give us the gist of your experience"
+                    />
+                  </div>
+                  <span class="maxChar">
+                    <span class="count">0</span>/<span class="tillcount"
+                      >20</span
+                    >
+                    max characters
+                  </span>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="inputField">
+                    <label class="labelHeading"> Tagline/Slogan </label>
+                    <input
+                      type="text"
+                      id="tagline"
+                      name="tagline"
+                      placeholder="Write a tagline for your restaurant"
+                    />
+                  </div>
+                  <span class="maxChar">
+                    <span class="count">0</span>/<span class="tillcount"
+                      >40</span
+                    >
+                    max characters
+                  </span>
+                </div>
+                <div class="col-md-12">
+                  <div class="inputField">
+                    <label class="labelHeading">About the Restaurant</label>
+                    <textarea
+                      id="aboutRestaurant"
+                      name="aboutRestaurant"
+                      placeholder="Write a story, history or description about your restaurant.."
+                    ></textarea>
+                  </div>
+                  <span class="maxChar">
+                    <span class="count">0</span>/<span class="tillcount"
+                      >200</span
+                    >
+                    max characters
+                  </span>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="inputField">
+                    <label class="labelHeading">Address</label>
+                    <input
+                      type="text"
+                      id="address"
+                      name="address"
+                      placeholder="Enter your address"
+                    />
+                  </div>
+                  <span class="maxChar">
+                    <span class="count">0</span>/<span class="tillcount"
+                      >60</span
+                    >
+                    max characters
+                  </span>
+                </div>
+                <div class="col-md-12">
+                  <div class="inputField">
+                    <label class="labelHeading">Phone number</label>
+                    <input
+                      type="text"
+                      id="phoneNumber"
+                      name="phoneNumber"
+                      placeholder="2348123456789"
+                    />
+                  </div>
+                  <span class="maxChar">
+                    <span class="count">0</span>/<span class="tillcount"
+                      >13</span
+                    >
+                    max characters
+                  </span>
+                </div>
+                <div class="col-md-12">
+                  <div class="inputField">
+                    <label class="labelHeading">Email addresses</label>
+                    <input
+                      type="text"
+                      id="emailAddress"
+                      name="emailAddress"
+                      placeholder="example@email.com"
+                    />
+                  </div>
+                  <span class="maxChar">
+                    <span class="count">0</span>/<span class="tillcount"
+                      >20</span
+                    >
+                    max characters
+                  </span>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="inputField">
+                    <label class="labelHeading"> Operating days/hours </label>
+                    <input
+                      type="text"
+                      id="operatingHours"
+                      name="operatingHours"
+                      placeholder="Monday - Sunday: 8am - 9pm"
+                    />
+                  </div>
+                  <span class="maxChar">
+                    <span class="count">0</span>/<span class="tillcount"
+                      >40</span
+                    >
+                    max characters
+                  </span>
+                </div>
+                <!-- Rating Input -->
+                <!-- <div class="col-md-12">
+                  <div class="inputField">
+                    <label class="labelHeading">
+                      How would you rate your experience?
+                    </label>
+                    <div class="rating">
+                      <div class="ratingSingle"></div>
+                      <div class="ratingSingle"></div>
+                      <div class="ratingSingle"></div>
+                      <div class="ratingSingle"></div>
+                      <div class="ratingSingle"></div>
+                      <span class="avgRating">Make the Rating!</span>
+                    </div>
+                  </div>
+                </div> -->
+
+                <!-- Dropdown for Location -->
+                <!-- <div class="col-md-12">
+                  <div class="inputField">
+                    <label class="labelHeading"> Reservation Options </label>
+                    <select name="place" required>
+                      <option value="">Select one</option>
+                      <option value="Pakistan">Pakistan</option>
+                      <option value="Bangladesh">Bangladesh</option>
+                      <option value="India">India</option>
+                    </select>
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </div>
+                </div> -->
+
+                <!-- Radio Buttons for Travel Type -->
+                <!-- <div class="col-md-12">
+                  <div class="inputField">
+                    <label class="labelHeading"> Types of Services Offered </label>
+                    <div class="d-flex align-itmes-center flex-wrap">
+                      <div class="radioField">
+                        <input type="radio" name="type" />
+                        <label>Dine-in</label>
+                      </div>
+                      <div class="radioField">
+                        <input type="radio" name="type" />
+                        <label>Takeout</label>
+                      </div>
+                      <div class="radioField">
+                        <input type="radio" name="type" />
+                        <label>Delivery</label>
+                      </div>
+                      <div class="radioField">
+                        <input type="radio" name="type" />
+                        <label>Catering</label>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+
+                <div class="col-md-12">
+                  <div class="inputField">
+                    <label class="labelHeading">
+                      Types of Services Offered
+                    </label>
+                    <div class="d-flex align-itmes-center flex-wrap">
+                      <div class="radioField">
+                        <input
+                          type="checkbox"
+                          name="services"
+                          value="Dine-in"
+                        />
+                        <label>Dine-in</label>
+                      </div>
+                      <div class="radioField">
+                        <input
+                          type="checkbox"
+                          name="services"
+                          value="Takeout"
+                        />
+                        <label>Takeout</label>
+                      </div>
+                      <div class="radioField">
+                        <input
+                          type="checkbox"
+                          name="services"
+                          value="Delivery"
+                        />
+                        <label>Delivery</label>
+                      </div>
+                      <div class="radioField">
+                        <input
+                          type="checkbox"
+                          name="services"
+                          value="Catering"
+                        />
+                        <label>Catering</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="inputField">
+                    <label class="labelHeading"
+                      >Do you offer reservation options
+                    </label>
+                    <div class="d-flex align-itmes-center flex-wrap">
+                      <div class="radioField">
+                        <input type="radio" name="reservation" />
+                        <input
+                          type="hidden"
+                          name="reservationPrice"
+                          value="40000"
+                        />
+                        <label>Yes</label>
+                      </div>
+                      <div class="radioField">
+                        <input type="radio" name="reservation" />
+                        <label>No</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="inputField">
+                    <label class="labelHeading"
+                      >Do you want an online ordering system?</label
+                    >
+                    <div class="d-flex align-itmes-center flex-wrap">
+                      <div class="radioField">
+                        <input type="radio" name="order" />
+                        <input
+                          type="hidden"
+                          name="orderingPrice"
+                          value="150000"
+                        />
+                        <label>Yes</label>
+                      </div>
+                      <div class="radioField">
+                        <input type="radio" name="order" />
+                        <label>No</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="inputField">
+                    <label class="labelHeading"
+                      >Do you want a QR menu and payment system?</label
+                    >
+                    <div class="d-flex align-itmes-center flex-wrap">
+                      <div class="radioField">
+                        <input type="radio" name="qrMenuPayment" />
+                        <input
+                          type="hidden"
+                          name="qrMenuPaymentPrice"
+                          value="100000"
+                        />
+                        <label>Yes</label>
+                      </div>
+                      <div class="radioField">
+                        <input type="radio" name="payment" />
+                        <label>No</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Review Textarea -->
+
+                <!-- Photo Upload -->
+                <div class="col-md-12">
+                  <div
+                    class="inputField"
+                    onclick="document.getElementById('singleImage').click()"
+                  >
+                    <label class="labelHeading mb-0"
+                      >Please provide your Logo
+                    </label>
+                    <label for="logo" class="file">
+                      <input type="file" name="logo" id="singleImage" onchange="handleSingleImageUpload(event)"/>
+                      <i class="fa-solid fa-image"></i>
+                      <h3>Click to add photos</h3>
+                      <p>or drag and drop</p>
+                      <img id="singleImagePreview" />
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div
+                    class="inputField"
+                    onclick="document.getElementById('multipleImagesA').click()"
+                  >
+                    <label class="labelHeading mb-0"
+                      >Photos of the Restaurant (interior and exterior)</label
+                    >
+                    <span class="optional">Optional</span>
+                    <label for="restaurantPhotos" class="file">
+                      <input type="file" name="restaurantPhotos" id="multipleImagesA" multiple onchange="handleMultipleImageUpload(event, 'multipleImagesPreviewA')" />
+                      <i class="fa-solid fa-image"></i>
+                      <h3>Click to add photos</h3>
+                      <p>or drag and drop</p>
+                      <div class="multiple-images-preview" id="multipleImagesPreviewA"></div>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div
+                    class="inputField"
+                    onclick="document.getElementById('multipleImagesB').click()"
+                  >
+                    <label class="labelHeading mb-0"
+                      >Photos of staffs (if available)
+                    </label>
+                    <span class="optional">Optional</span>
+                    <label for="staffPhotos" class="file">
+                      <input type="file" name="staffPhotos" id="multipleImagesB" multiple onchange="handleMultipleImageUpload(event, 'multipleImagesPreviewB')" />
+                      <i class="fa-solid fa-image"></i>
+                      <h3>Click to add photos</h3>
+                      <p>or drag and drop</p>
+                      <div class="multiple-images-preview" id="multipleImagesPreviewB"></div>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="inputField">
+                    <label class="labelHeading"
+                      >Do you want a career/job listing section?</label
+                    >
+                    <div class="d-flex align-itmes-center flex-wrap">
+                      <div class="radioField">
+                        <input type="radio" name="career" />
+                        <input type="hidden" name="careerPrice" value="30000" />
+                        <label>Yes</label>
+                      </div>
+                      <div class="radioField">
+                        <input type="radio" name="career" />
+                        <label>No</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 
+                <div class="col-md-12">
+                  <div class="inputField">
+                    <label class="labelHeading">
+                      Do you have any specific functionalities or features you want to be implemented
+                    </label>
+                    <span class="optional">Optional</span>
+                    <textarea
+                      id="message"
+                      name="message"
+                      placeholder="Feel free to make your request, we will review it and get back to you..."
+                    ></textarea>
+                  </div>
+                  <span class="maxChar">
+                    <span class="count">0</span>/<span class="tillcount"
+                      >200</span
+                    >
+                    min characters
+                  </span>
+                </div> -->
+                <div class="col-md-12">
+                  <button id="submitButton" type="submit" class="apply">
+                    Proceed
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- <div id="error"></div> -->
+
+    <script>
+      function handleSingleImageUpload(event) {
+        const fileInput = event.target;
+        const file = fileInput.files[0];
+        const preview = document.getElementById("singleImagePreview");
+        const label = fileInput.nextElementSibling.nextElementSibling;
+
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            preview.src = e.target.result;
+            preview.style.display = "block";
+          };
+          reader.readAsDataURL(file);
+          label.innerHTML = file.name;
+        }
+      }
+
+      function handleMultipleImageUpload(event, previewId) {
+        const fileInput = event.target;
+        const files = fileInput.files;
+        const preview = document.getElementById(previewId);
+
+        preview.innerHTML = "";
+        if (files.length > 4) {
+          alert("You can only upload a maximum of 4 images.");
+          fileInput.value = "";
+          return;
+        }
+
+        Array.from(files).forEach((file) => {
+          const reader = new FileReader();
+          reader.onload = function (e) {
+            const img = document.createElement("img");
+            img.src = e.target.result;
+            preview.appendChild(img);
+          };
+          reader.readAsDataURL(file);
+        });
+      }
+
+      function handleSubmit(event) {
+        event.preventDefault();
+        const form = document.getElementById("clientInfo");
+        const formData = {};
+        for (let i = 0; i < form.elements.length; i++) {
+          const element = form.elements[i];
+          if (element.type === "checkbox" && element.checked) {
+            if (!formData[element.name]) {
+              formData[element.name] = [];
+            }
+            formData[element.name].push(element.value);
+          } else if (element.type !== "checkbox" && element.name) {
+            formData[element.name] = element.value;
+          }
+        }
+        localStorage.setItem("formData", JSON.stringify(formData));
+        const submitButton = document.getElementById("submitButton");
+        submitButton.disabled = true;
+        submitButton.innerHTML =
+          '<div class="loading-dots"><div></div><div></div><div></div><div></div></div>';
+        setTimeout(() => {
+          window.location.href = "invoice.html";
+        }, 1000);
+      }
+      // function handleSubmit(event) {
+      //   event.preventDefault();
+
+      //   const form = document.getElementById("clientInfo");
+      //   const formData = {};
+
+      //   for (let i = 0; i < form.elements.length; i++) {
+      //     const element = form.elements[i];
+      //     if (element.type === "checkbox" && element.checked) {
+      //       if (!formData[element.name]) {
+      //         formData[element.name] = [];
+      //       }
+      //       formData[element.name].push(element.value);
+      //     } else if (element.type !== "checkbox" && element.name) {
+      //       formData[element.name] = element.value;
+      //     }
+      //   }
+
+      //   localStorage.setItem("formData", JSON.stringify(formData));
+
+      //   const submitButton = document.getElementById("submitButton");
+      //   submitButton.disabled = true;
+      //   submitButton.innerHTML =
+      //     '<div class="loading-dots"><div></div><div></div><div></div><div></div></div>';
+
+      //   setTimeout(() => {
+      //     window.location.href = "invoice.html";
+      //   }, 1000);
+      // }
+      // function previewImages(event, previewElementId) {
+      //   const files = event.target.files;
+      //   const previewElement = document.getElementById(previewElementId);
+      //   previewElement.innerHTML = "";
+
+      //   for (const file of files) {
+      //     const reader = new FileReader();
+      //     reader.onload = function (e) {
+      //       const img = document.createElement("img");
+      //       img.src = e.target.result;
+      //       previewElement.appendChild(img);
+      //     };
+      //     reader.readAsDataURL(file);
+      //   }
+      // }
+    </script>
+  </body>
+</html>
